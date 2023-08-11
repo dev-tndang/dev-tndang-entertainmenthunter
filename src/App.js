@@ -1,20 +1,19 @@
 import './App.css';
 
-const App = () => {
-  const name = null;
+const Person = () => {
+  return (
+    <>
+      <h2>First Name: Thien</h2>
+      <h2>Last Name: Dang</h2>
+      <h3>Age: 31</h3>
+    </>
+  )
+}
 
+const App = () => {
   return (
     <div className="App">
-      {name ? (
-        <>
-        <h1>Hello, {name}!</h1>
-        </>
-      ):(
-        <>
-        <h1>Error!</h1>
-        <h2>There is no name...</h2>
-        </>
-      )}
+      <Person />
     </div>
   );
 }
