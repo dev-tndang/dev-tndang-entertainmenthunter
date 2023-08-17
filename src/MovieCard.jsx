@@ -1,10 +1,11 @@
 import React from "react";
 
-const MovieCard = ({ movie}) => {
+const MovieCard = ({ movie }) => {
+    const movieYear = movie.Year.replace("–", "");
+
     return (
         <div className="movie">
-            <div>
-                <p>{movie.Year}</p>
+            <div className="spacer">
             </div>
             <div>
                 <img
@@ -14,7 +15,7 @@ const MovieCard = ({ movie}) => {
             </div>
             <div>
                 <span>{movie.Type}</span>
-                <h3>{movie.Title}</h3>
+                <h3>{movie.Title} ({movieYear})</h3>
             </div>
         </div>
     );

@@ -3,6 +3,7 @@ import MovieCard from "./MovieCard";
 
 import "./App.css";
 import SearchIcon from "./search.svg";
+import EHLogo from "./eh_logo.png";
 
 const API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=b7ef72a5";
 
@@ -19,16 +20,21 @@ const App = () => {
     }
 
     useEffect(() => {
-        searchMovie("Spiderman");
+        searchMovie("online");
     }, [])
 
     return (
         <div className="app">
-            <h1>Movie Base</h1>
+            <img
+                src={EHLogo}
+                alt="Entertainment Hunter Logo"
+                width="420px"
+                onClick={() => {window.location.reload()}}
+            />
 
             <div className="search">
                 <input
-                    placeholder="Search for a Movie..."
+                    placeholder="Search by Title..."
                     value={searchTerm}
                     onChange={(e) => {setSearchTerm(e.target.value)}}
                 />
